@@ -3,4 +3,4 @@ so it needs to have java version 10.0.1 or superior installed, in order to be ex
 
 It is still possible to download the sources and recompile with another version. 
 
-See the README to find instructions for running the demo, and to recompile it.
+Instructions for running the demo, and to recompile it, are in the README file.
