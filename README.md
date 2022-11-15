@@ -1,16 +1,18 @@
 # PathChecker
 
-==========================
-Visual path checker - Demo
-==========================
 
--Purpose
--Sources
--Compiling
--Execution
--Instructions for use
+DEMO: Visual path checker
 
-*** PURPOSE
+CONTENT OF THIS README
+
+Purpose,
+Sources,
+Compiling,
+Execution,
+Instructions for use,
+References.
+
+PURPOSE
 
 Draw a digital path (specified as a sequence of moves in the four cardinal
 directions on a square grid) without self crossing (if possible).
@@ -31,30 +33,39 @@ forbidden moves are disabled.
 If the path is pre-entered as a string of characters in N,S,W,E, the
 path is cheched before use.
 
-*** SOURCES
+SOURCES AND COMPILING
+
+The executable is provided. If you don't plan to recompile, skip this section.
 
 The sources of the program are in Java. The package orthopaths contains
 the following classes:
- Vertex
- Direction
- HalfSegment             
- VertexSet
- HalfSegmentSkipList
- PathUtils
- PathChecker
- VisualCheck
+ Vertex,
+ Direction,
+ HalfSegment,             
+ VertexSet,
+ HalfSegmentSkipList,
+ PathUtils,
+ PathChecker,
+ VisualCheck.
 
-*** COMPILING
+To compile, you need to have the Java JDK installed on your PC. 
+Type the following from a command window:
 
-  javac orthopaths/*java
-  javadoc  orthopaths/*java # optional, for documentation
+  javac orthopaths/*.java
+
   jar cfm pathchecker.jar Manifest.txt orthopaths/*.class
 
-*** EXECUTION
+And, optionally, for generating the documentation:
+
+  javadoc  orthopaths/*.java 
+
+EXECUTION
+
+If you want just to run the demo, download the already compiled file pathchecker.jar
 
   java -jar pathchecker.jar 
 
-*** INSTRUCTIONS FOR USE
+INSTRUCTIONS FOR USE
 
 The upper part of the window is the drawing area. The green dot marks the
 starting point of the path. The window enlarges automatically when the path
@@ -98,3 +109,11 @@ The two buttons "undo last move" and "undo all moves" allow undoing
 drawing actions. If the undone move came from a given path, it is sent back
 to the part of the path which is still to be drawn. If the undone move 
 was entered interactively, it is simply lost.
+
+REFERENCES
+
+This demo is associated with the article
+"Crossing-Free Paths in the Square Grid" 
+by Lidija Comic (faculty of Technical Sciences, University of Novi Sad, Serbia)
+and Paola Magillo (DIBRIS, University of Genova, Italy),
+submitted for publication in November 2022.
